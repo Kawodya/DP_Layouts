@@ -10,38 +10,54 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Flutter Layouts",
+      title: "Layout 2",
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xff9E00FF),
+
         ),
-        body:Padding(
-          padding: const EdgeInsets.all(10.0),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-             children: [
-            Container(
-              width: double.infinity,
-              height: 350,
-              color:const Color(0xff06FFA5),
-            ),
-            Container(
-              width: double.infinity,
-              height: 350,
-              color: const Color(0xffFFE500),
-
-            ),
-
-          ],
-
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 175,
+                width: double.infinity,
+                color: Color(0xff06FFA5),
+          
+              ),
+              Container(
+                height: 175,
+                width: double.infinity,
+                color: Color(0xff06FFA5),
+          
+          
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: 175,
+                    height: 300,
+                    color: Color(0xffFFE500),
+                  ),
+                  Container(
+                     width: 175,
+                    height: 300,
+                    color: Color(0xffFFE500),
+          
+                  ),
+                  
+                ],
+              ),
+          
+            ],
           ),
-
-
-         
         ),
 
-      
 
+        
       ),
     );
   }
